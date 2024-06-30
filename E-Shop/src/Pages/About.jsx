@@ -2,10 +2,17 @@ import React, { useContext } from 'react';
 import './CSS/About.css'
 import { useState,useEffect } from 'react';
 import { ShopContext } from '../Context/ShopContext';
-
+import Navbar from '../Components/Navbar/Navbar';
+import Footer from '../Components/Footer/Footer';
+import ScrollToTop from "react-scroll-to-top";
 const About = () => {
+
   const {theme}=useContext(ShopContext);
   return (
+    <div className={`${theme}_app`}>
+      <Navbar />
+
+
     <div className={'about_page_'+theme}>
       <h1 className="text-center mt-4" id = "aboutheading"><strong>About Us</strong></h1>
     <div className="container-my d-flex align-items-center justify-content-center border shadow-lg rounded py-4">
@@ -45,6 +52,11 @@ const About = () => {
     </div>
     </div>
     </div>
+    </div>
+
+    <Footer />
+    
+      <ScrollToTop smooth component={<p style={{ color: "blue" }}>↑</p>} />
     </div>
   );
 };

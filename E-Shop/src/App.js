@@ -1,29 +1,31 @@
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
 import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import LoginSignup from "./Pages/LoginSignup";
-import Footer from "./Components/Footer/Footer";
+
 import men_banner from "./Components/Assets/banner_mens.png";
 import women_banner from "./Components/Assets/banner_women.png";
 import kids_banner from "./Components/Assets/banner_kids.png";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import NotFound from "./Pages/NotFound";
-import ScrollToTop from "react-scroll-to-top";
+
 import { useContext, useEffect } from "react";
 import { ShopContext } from "./Context/ShopContext";
 import Collections from "./Pages/Collections";
 import Offers from "./Pages/Offers";
+import AddUser from "./admin/pages/user/AddUser";
+import Management from "./admin/pages/user/Management";
 function App() {
   const { theme } = useContext(ShopContext);
   return (
-    <div className={`${theme}_app`}>
+
       <BrowserRouter>
-        <Navbar />
+      
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
@@ -48,11 +50,11 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/collections" element={<Collections />} />
-        </Routes>
-        <Footer />
+          <Route path="/add-user" element={<AddUser />} />
+          <Route path="/manage-user" element={<Management />} />
+        </Routes> 
       </BrowserRouter>
-      <ScrollToTop smooth component={<p style={{ color: "blue" }}>↑</p>} />
-    </div>
+  
   );
 }
 

@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./CSS/NotFound.css";
+import Navbar from '../Components/Navbar/Navbar';
+import Footer from '../Components/Footer/Footer';
+import ScrollToTop from "react-scroll-to-top";
 
 function NotFound() {
   return (
+    <div>
+      <Navbar />
     <div className="container">
       <div className="text-center">
         <svg
@@ -97,6 +102,10 @@ function NotFound() {
           <Link to="/">Go back</Link>
         </div>
       </div>
+    </div>
+    <Footer />
+    
+      <ScrollToTop smooth component={<p style={{ color: "blue" }}>↑</p>} />
     </div>
   );
 }

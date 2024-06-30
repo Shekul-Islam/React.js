@@ -1,10 +1,15 @@
 import React from 'react'
 import * as Components from './Components';
-
+import {Link} from 'react-router-dom';
+import Navbar from '../Components/Navbar/Navbar';
+import Footer from '../Components/Footer/Footer';
+import ScrollToTop from "react-scroll-to-top";
 
 const LoginSignup = () => {
   const [signIn, toggle] = React.useState(true);
   return(
+    <div>
+        <Navbar />
     <Components.div>
         <Components.Container>
           <Components.SignUpContainer signinIn={signIn}>
@@ -36,7 +41,7 @@ const LoginSignup = () => {
                       To keep connected with us please login with your personal info
                   </Components.Paragraph>
                   <Components.GhostButton onClick={() => toggle(true)}>
-                      Sign In
+                  <Link to="/add-user">Sigin </Link>
                   </Components.GhostButton>
                   </Components.LeftOverlayPanel>
 
@@ -55,7 +60,10 @@ const LoginSignup = () => {
 
       </Components.Container>
     </Components.div>
-      
+    <Footer />
+    
+    <ScrollToTop smooth component={<p style={{ color: "blue" }}>↑</p>} />
+</div>
   )
 }
 
