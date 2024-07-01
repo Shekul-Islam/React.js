@@ -39,8 +39,8 @@
   }
 }
 .light_app{
-  background-color: #282c34;
+  background-color: #33545c;
 }
 .dark_app{
-  background: white;
+  background: rgba(0, 191, 255, 0.055);
 }
