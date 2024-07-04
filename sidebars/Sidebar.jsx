@@ -18,6 +18,8 @@ import {
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 import { SidebarContext } from "../../context/SidebarContext";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 const Sidebar = () => {
   const { theme } = useContext(ThemeContext);
@@ -50,7 +52,7 @@ const Sidebar = () => {
       <div className="sidebar-top">
         <div className="sidebar-brand">
           <img src={theme === LIGHT_THEME ? LogoBlue : LogoWhite} alt="" />
-          <span className="sidebar-brand-text">tabernam.</span>
+          <span className="sidebar-brand-text">Pharmacy</span>
         </div>
         <button className="sidebar-close-btn" onClick={closeSidebar}>
           <MdOutlineClose size={24} />
@@ -67,20 +69,42 @@ const Sidebar = () => {
                 <span className="menu-link-text">Dashboard</span>
               </Link>
             </li>
+            <Dropdown>
             <li className="menu-item">
-              <Link to="/" className="menu-link">
+             
+                <a href="#">
                 <span className="menu-link-icon">
                   <MdOutlineBarChart size={20} />
                 </span>
-                <span className="menu-link-text">Statistics</span>
-              </Link>
+                <span className="menu-link-text">Customer</span>
+              
+                </a>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <span>Add Customer</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Customer List</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Customer Ledger</span>
+                    </a>
+                  </li>
+                </ul>
+              
             </li>
+            </Dropdown>
             <li className="menu-item">
               <Link to="/" className="menu-link">
                 <span className="menu-link-icon">
                   <MdOutlineAttachMoney size={20} />
                 </span>
-                <span className="menu-link-text">Payment</span>
+                <span className="menu-link-text">Medicin</span>
               </Link>
             </li>
             <li className="menu-item">
@@ -88,7 +112,7 @@ const Sidebar = () => {
                 <span className="menu-link-icon">
                   <MdOutlineCurrencyExchange size={18} />
                 </span>
-                <span className="menu-link-text">Transactions</span>
+                <span className="menu-link-text">Manufacturer</span>
               </Link>
             </li>
             <li className="menu-item">
@@ -96,7 +120,7 @@ const Sidebar = () => {
                 <span className="menu-link-icon">
                   <MdOutlineShoppingBag size={20} />
                 </span>
-                <span className="menu-link-text">Products</span>
+                <span className="menu-link-text">Return</span>
               </Link>
             </li>
             <li className="menu-item">
@@ -104,7 +128,7 @@ const Sidebar = () => {
                 <span className="menu-link-icon">
                   <MdOutlinePeople size={20} />
                 </span>
-                <span className="menu-link-text">Customer</span>
+                <span className="menu-link-text">Human Resource</span>
               </Link>
             </li>
             <li className="menu-item">
@@ -112,7 +136,23 @@ const Sidebar = () => {
                 <span className="menu-link-icon">
                   <MdOutlineMessage size={18} />
                 </span>
-                <span className="menu-link-text">Messages</span>
+                <span className="menu-link-text">Finance</span>
+              </Link>
+            </li>
+            <li className="menu-item">
+              <Link to="/" className="menu-link">
+                <span className="menu-link-icon">
+                  <MdOutlineMessage size={18} />
+                </span>
+                <span className="menu-link-text">Report</span>
+              </Link>
+            </li>
+            <li className="menu-item">
+              <Link to="/" className="menu-link">
+                <span className="menu-link-icon">
+                  <MdOutlineMessage size={18} />
+                </span>
+                <span className="menu-link-text">Support</span>
               </Link>
             </li>
           </ul>
