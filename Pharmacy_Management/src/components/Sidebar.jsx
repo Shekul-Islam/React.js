@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
-import { BiAnalyse, BiSearch } from "react-icons/bi";
+import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser, FaUserAlt, FaUserAltSlash, FaUserAstronaut, FaUserCheck, FaUserCog, FaUserMd, FaUserPlus, FaUsersCog, FaUserSecret } from "react-icons/fa";
+import {  BiSearch } from "react-icons/bi";
 import { BiCog } from "react-icons/bi";
-import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
-import { BsCartCheck } from "react-icons/bs";
+import { AiFillHeart } from "react-icons/ai";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+import { FaUsersBetweenLines } from "react-icons/fa6";
+import Medicine from "../pages/Medicine";
+
 
 
 const routes = [
@@ -17,46 +18,142 @@ const routes = [
     icon: <FaHome />,
   },
   {
-    path: "/users",
-    name: "Users",
+    path: "/customer",
+    name: "Customer",
     icon: <FaUser />,
-  },
-  {
-    path: "/messages",
-    name: "Messages",
-    icon: <MdMessage />,
-  },
-  {
-    path: "/analytics",
-    name: "Analytics",
-    icon: <BiAnalyse />,
-  },
-  {
-    path: "/file-manager",
-    name: "File Manager",
-    icon: <AiTwotoneFileExclamation />,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
-        icon: <FaUser />,
+        path: "/settings/add-customer",
+        name: "Add Customer",
+        icon: <FaUserPlus/>,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
-        icon: <FaLock />,
+        path: "/settings/customer-list",
+        name: "Customer List",
+        icon: <FaUsersBetweenLines />,
       },
       {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
+        path: "/settings/customer-ledger",
+        name: "Customer Ledger",
+        icon: <FaUserCog/>,
+      },
+    ],
+  },
+  
+  {
+    path: "/medicine",
+    name: "Medicine",
+    icon: <Medicine />,
+    subRoutes: [
+      {
+        path: "/settings/add-medicine",
+        name: "Add Medicine",
+        icon: <FaUserPlus/>,
+      },
+      {
+        path: "/settings/medicine-list",
+        name: "Medicine List",
+        icon: <FaUsersBetweenLines />,
+      },
+      {
+        path: "/settings/medicine-details",
+        name: "Medicine Details",
+        icon: <FaUserCog/>,
       },
     ],
   },
   {
-    path: "/order",
-    name: "Order",
-    icon: <BsCartCheck />,
+    path: "/manufacturer",
+    name: "Manufacturer",
+    icon: <FaUser />,
+    subRoutes: [
+      {
+        path: "/settings/add-manufacturer",
+        name: "Add Manufacturer",
+        icon: <FaUserPlus/>,
+      },
+      {
+        path: "/settings/manufacterer-list",
+        name: "Manufacturer List",
+        icon: <FaUsersBetweenLines />,
+      },
+      {
+        path: "/settings/manufacturer-ledger",
+        name: "Manufacturer Ledger",
+        icon: <FaUserCog/>,
+      },
+    ],
+  },
+  {
+    path: "/return",
+    name: "Return",
+    icon: <FaUser />,
+    subRoutes: [
+      {
+        path: "/settings/add-wastage-return",
+        name: "Add Wastage Retunr",
+        icon: <FaUserPlus/>,
+      },
+      {
+        path: "/settings/wastage-return-list",
+        name: "Wastage Return List",
+        icon: <FaUsersBetweenLines />,
+      },
+      {
+        path: "/settings/add-customer-return",
+        name: "Add Customer Return ",
+        icon: <FaUserCog/>,
+      },
+      {
+        path: "/settings/customer-return-list",
+        name: "Customer Return List ",
+        icon: <FaUserCog/>,
+      },
+    ],
+  },
+  {
+    path: "/human-resource",
+    name: "Human Resource",
+    icon: <FaUser />,
+    subRoutes: [
+      {
+        path: "/settings/Employee",
+        name: "Employe Profile",
+        icon: <FaUserPlus/>,
+      },
+      {
+        path: "/settings/attendence",
+        name: "Attendence",
+        icon: <FaUsersBetweenLines />,
+      },
+      {
+        path: "/settings/salary",
+        name: "Salary ",
+        icon: <FaUserCog/>,
+      },
+    ],
+  },
+  {
+    path: "/finance",
+    name: "Finance",
+    icon: <FaUser />,
+    subRoutes: [
+      {
+        path: "/settings/income",
+        name: "Income",
+        icon: <FaUserPlus/>,
+      },
+      {
+        path: "/settings/expence",
+        name: "Expence",
+        icon: <FaUsersBetweenLines />,
+      },
+      {
+        path: "/settings/invoice-list",
+        name: "Invoice List ",
+        icon: <FaUserCog/>,
+      },
+    ],
   },
   {
     path: "/settings",
@@ -65,19 +162,14 @@ const routes = [
     exact: true,
     subRoutes: [
       {
-        path: "/settings/profile",
-        name: "Profile ",
+        path: "/settings/theme-setting",
+        name: "Theme Setting ",
         icon: <FaUser />,
       },
       {
-        path: "/settings/2fa",
-        name: "2FA",
+        path: "/settings/log-out",
+        name: "Log Out",
         icon: <FaLock />,
-      },
-      {
-        path: "/settings/billing",
-        name: "Billing",
-        icon: <FaMoneyBill />,
       },
     ],
   },
@@ -100,8 +192,8 @@ const Sidebar = ({ children }) => {
       },
     },
     show: {
-      width: "140px",
-      padding: "5px 15px",
+      width: "180px",
+      padding: "7px 15px",
       transition: {
         duration: 0.2,
       },
@@ -130,7 +222,7 @@ const Sidebar = ({ children }) => {
       <div className="main-container">
         <motion.div
           animate={{
-            width: isOpen ? "200px" : "45px",
+            width: isOpen ? "222px" : "50px",
 
             transition: {
               duration: 0.5,
@@ -150,7 +242,7 @@ const Sidebar = ({ children }) => {
                   exit="hidden"
                   className="logo"
                 >
-                  DoSomeCoding
+                 <h3> Pharmacy</h3>
                 </motion.h1>
               )}
             </AnimatePresence>
@@ -216,7 +308,7 @@ const Sidebar = ({ children }) => {
           </section>
         </motion.div>
 
-        <main>{children}</main>
+        <main className="sidebar">{children}</main>
       </div>
     </>
   );
