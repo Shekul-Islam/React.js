@@ -7,14 +7,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MoonIcon from "./assets/icons/moon.svg";
 import SunIcon from "./assets/icons/sun.svg";
 import Dashboard from "./pages/Dashboard";
-import FileManager from "./pages/FileManager";
-import Messages from "./pages/Messages";
-import Order from "./pages/Order";
 import Saved from "./pages/Saved";
 import Setting from "./pages/Setting";
-import Users from "./pages/Users";
 import Sidebar from "./components/Sidebar";
 import SidebarMenu from "./components/SidebarMenu";
+import BaseLayout from "./layout/BaseLayout";
+import Customer from "./pages/Customer";
+import Medicine from "./pages/Medicine";
+import Manufacturer from "./pages/Manufacturer";
+import Return from "./pages/Return";
+import HumanResource from "./pages/HumanResource";
+import Report from "./pages/Report";
+import Support from "./pages/Support";
 
 
 function App() {
@@ -32,18 +36,28 @@ function App() {
   return (
     <>
       <Router>
-      <Sidebar>
+      <Sidebar/>
         <Routes>
+          <Route element={<BaseLayout />}/>
           <Route path="/" element={<Dashboard />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/file-manager" element={<FileManager />} />
-          <Route path="/order" element={<Order />} />
+          <Route path="/customer" element={<Customer />} />
+          <Route path="/medicine" element={<Medicine />} />
+          <Route path="/manufacturer" element={<Manufacturer />} />
+          <Route path="/return" element={<Return />} />
+          <Route path="/human-resouce" element={<HumanResource />} />
           <Route path="/saved" element={<Saved />} />
           <Route path="/settings" element={<Setting />} />
-          <Route path="sidebarmenu" element={<SidebarMenu/>} />
+          <Route path="/report" element={<Report />} />
+          <Route path="/support" element={<Support />} />
+         
+          <Route path="sidebar" element={<Sidebar/>}>
+                <Route path="sidebarmenu" element={<SidebarMenu/>}/>
+          </Route>
+          
+
+          
         </Routes>
-      </Sidebar>
+      
     
 
         <button
