@@ -19,6 +19,7 @@
     "react-dropdown": "^1.11.0",
     "react-icons": "^4.12.0",
     "react-native-vector-icons": "^10.1.0",
+    "react-render": "^4.0.0",
     "react-router-dom": "^6.24.1",
     "recharts": "^2.10.3",
     "sass": "^1.69.7"
