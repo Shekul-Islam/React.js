@@ -6,6 +6,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
+import BaseLayout from "../layout/BaseLayout";
 import {  FaCapsules, FaCartPlus, FaListCheck, FaListOl, FaMoneyBillTransfer, FaPeopleArrows, FaPlus, FaRecycle, FaUsersBetweenLines } from "react-icons/fa6";
 
 

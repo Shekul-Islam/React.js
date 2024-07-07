@@ -1,25 +1,21 @@
-// import { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "./App.css";
 
-
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-// import Dashboard from "./pages/Dashboard";
-import Saved from "./pages/Saved";
-import Setting from "./pages/Setting";
-import Sidebar from "./components/Sidebar";
+import Saved from "./pages/sidebarpages/Saved";
+import Setting from "./pages/sidebarpages/Setting";
 import BaseLayout from "./layout/BaseLayout";
-import Customer from "./pages/Customer";
-import Medicine from "./pages/Medicine";
-import Manufacturer from "./pages/Manufacturer";
-import Return from "./pages/Return";
-import HumanResource from "./pages/HumanResource";
-import Report from "./pages/Report";
-import Support from "./pages/Support";
-// import AddCustomer from "./components/AddCustomer";
-// import CustomerList from "./components/CustomerList";
-// import Dashboard from "./components/Dashboard/Dashboard";
+import Customer from "./pages/sidebarpages/Customer";
+import Medicine from "./pages/sidebarpages/Medicine";
+import Manufacturer from "./pages/sidebarpages/Manufacturer";
+import Return from "./pages/sidebarpages/Return";
+import HumanResource from "./pages/sidebarpages/HumanResource";
+import Report from "./pages/sidebarpages/Report";
+import Support from "./pages/sidebarpages/Support";
+import Sidebar from "./components/Sidebar";
+
+
+
 
 
 function App() {
@@ -27,13 +23,13 @@ function App() {
 
   return (
 
-    <div className="App">
-              <h2>Customer Routing</h2>
+    // <div className="App">
+    // <h2>Customer Routing</h2>
             
 
     <BrowserRouter>
 
-    <nav>
+    {/* <nav>
       <ul>
         <li>
           <link to="/">Add Customr</link>
@@ -42,14 +38,13 @@ function App() {
           <link to="list/customer">Customer List</link>
         </li>
       </ul>
-    </nav>
+    </nav> */}
 
       <Sidebar/>
       {/* <Dashboard/> */}
-      
+
         <Routes>
           <Route element={<BaseLayout />}/>
-          {/* <Route path="/" element={<Dashboard />} /> */}
           <Route path="/customer" element={<Customer />} />
           <Route path="/medicine" element={<Medicine />} />
           <Route path="/manufacturer" element={<Manufacturer />} />
@@ -78,7 +73,7 @@ function App() {
 
       
     </BrowserRouter>
-    </div>
+    // </div>
   );
 }
 
