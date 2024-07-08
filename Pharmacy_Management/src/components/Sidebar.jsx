@@ -106,7 +106,7 @@ const routes = [
         icon: <FaCheckCircle/>,
       },
       {
-        path: "/settings/customer-return-list",
+        path: "/customer-return-list",
         name: "Customer Return List ",
         icon: <FaUserCog/>,
       },
