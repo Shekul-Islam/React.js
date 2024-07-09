@@ -10,14 +10,16 @@ nav ul {
 nav ul li {
   display: inline-block;
   padding: 18px;
+  justify-content: space-between;
 }
 
 
 .main-container {
-  
   display: flex;
+  
 }
 main {
+ 
   padding: 5px;
 }
 

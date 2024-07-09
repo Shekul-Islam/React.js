@@ -23,7 +23,7 @@ const routes = [
     icon: <FaUser />,
     subRoutes: [
       {
-        path: "/settings/add-customer",
+        path: "https://www.youtube.com/watch?v=FN70_o1D-zM&t=55s",
         name: "Add Customer",
         icon: <FaUserPlus/>,
       },
@@ -219,8 +219,8 @@ const Sidebar = ({ children }) => {
   };
 
   return (
-    <>
-      <div className="main-container">
+    <aside className="main-container sidebar-dark-primary elevation-4">
+      <div >
         <motion.div
           animate={{
             width: isOpen ? "230px" : "35px",
@@ -311,7 +311,7 @@ const Sidebar = ({ children }) => {
 
         <main className="sidebar">{children}</main>
       </div>
-    </>
+    </aside>
   );
 };
 
