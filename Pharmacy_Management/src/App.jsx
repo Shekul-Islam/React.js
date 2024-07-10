@@ -1,20 +1,28 @@
-import { useState } from 'react'
+import React from 'react'
 import {BrowserRouter,Routes,Route } from 'react-router-dom';
-import { AddCustomer } from './pages/customer/AddCustomer';
+import AddCustomer from './pages/customer/AddCustomer';
+import Saved from './pages/Saved';
+    
 
-function App() {
+
+const App = () => {
   return (
-       <BrowserRouter>     
+    <div>
+      <BrowserRouter>     
       <Routes>
         {/* <Route path="/home" element={<Home />} />
         <Route path="/register" element={<Register/>} /> */}
-        <Route path="/" element={<AddCustomer />} />
+        <Route path="/addcustomer" element={<AddCustomer/>} />
+        <Route path="/saved" element={<Saved/>} />
         {/* <Route path="/itemslist" element={<ListProduct />} />
         <Route path="/itemedit/:id" element={<EditProduct />} /> */}
       </Routes>
     </BrowserRouter>
-   
+    </div>
   )
 }
 
 export default App
+
+
+

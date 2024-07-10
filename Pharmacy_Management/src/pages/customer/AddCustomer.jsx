@@ -1,25 +1,23 @@
-import React from "react";
-import { Sidebar } from "../../components/Sidebar";
-import { Navbar } from "../../components/Navbar";
-import { Footer } from "../../components/Footer";
+import React from 'react'
+import Sidebar from '../../components/Sidebar'
+import Navbar from '../../components/Sidebar'
+import Footer from '../../components/Footer'
 
-export const AddCustomer = () => {
+const AddCustomer = () => {
   return (
     <div>
-      <div>
       <Sidebar />
-        
-       
+      <Navbar />
         <div id="main">
             
-        <Navbar />
+      
           <div className="main-content container-fluid">
             <div className="page-title">
               <div className="row">
                 <div className="col-12 col-md-6 order-md-1 order-last">
                   <h3>Datatable</h3>
                   <p className="text-subtitle text-muted">
-                    We use 'simple-datatables' made by @fiduswriter. You can
+                   
                     check the full documentation
                     <a href="https://github.com/fiduswriter/Simple-DataTables/wiki">
                       here
@@ -110,6 +108,7 @@ export const AddCustomer = () => {
         </div>
       <Footer />
       </div>
-    </div>
-  );
-};
+  )
+}
+
+export default AddCustomer
