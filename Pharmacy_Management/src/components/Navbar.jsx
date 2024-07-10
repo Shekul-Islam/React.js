@@ -1,120 +1,337 @@
-import React from 'react'
+import React from "react";
 
 export const Navbar = () => {
   return (
-    <div> 
-        <nav className="navbar navbar-header navbar-expand navbar-light">
-            <a className="sidebar-toggler" href="#">
-              <span className="navbar-toggler-icon" />
-            </a>
+    <div>
+      <div id="wrapper">
+        {/* navbar top */}
+        <nav
+          className="navbar navbar-default navbar-fixed-top"
+          role="navigation"
+          id="navbar"
+        >
+          {/* navbar-header */}
+          <div className="navbar-header">
             <button
-              className="btn navbar-toggler"
               type="button"
+              className="navbar-toggle"
               data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              data-target=".sidebar-collapse"
             >
-              <span className="navbar-toggler-icon" />
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
             </button>
-            <div
-              className="collapse navbar-collapse"
-              id="navbarSupportedContent"
-            >
-              <ul className="navbar-nav d-flex align-items-center navbar-light ml-auto">
-                <li className="dropdown nav-icon">
-                  <a
-                    href="#"
-                    data-toggle="dropdown"
-                    className="nav-link dropdown-toggle nav-link-lg nav-link-user"
-                  >
-                    <div className="d-lg-inline-block">
-                      <i data-feather="bell" />
+            <a className="navbar-brand" href="index.html">
+              <img src="assets/img/logo.png" alt />
+            </a>
+          </div>
+          {/* end navbar-header */}
+          {/* navbar-top-links */}
+          <ul className="nav navbar-top-links navbar-right">
+            {/* main dropdown */}
+            <li className="dropdown">
+              <a className="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span className="top-label label label-danger">3</span>
+                <i className="fa fa-envelope fa-3x" />
+              </a>
+              {/* dropdown-messages */}
+              <ul className="dropdown-menu dropdown-messages">
+                <li>
+                  <a href="#">
+                    <div>
+                      <strong>
+                        <span className=" label label-danger">
+                          Andrew Smith
+                        </span>
+                      </strong>
+                      <span className="pull-right text-muted">
+                        <em>Yesterday</em>
+                      </span>
+                    </div>
+                    <div>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Pellentesque eleifend...
                     </div>
                   </a>
-                  <div className="dropdown-menu dropdown-menu-right dropdown-menu-large">
-                    <h6 className="py-2 px-4">Notifications</h6>
-                    <ul className="list-group rounded-none">
-                      <li className="list-group-item border-0 align-items-start">
-                        <div className="avatar bg-success mr-3">
-                          <span className="avatar-content">
-                            <i data-feather="shopping-cart" />
-                          </span>
-                        </div>
-                        <div>
-                          <h6 className="text-bold">New Order</h6>
-                          <p className="text-xs">
-                            An order made by Ahmad Saugi for product Samsung
-                            Galaxy S69
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
                 </li>
-                <li className="dropdown nav-icon mr-2">
-                  <a
-                    href="#"
-                    data-toggle="dropdown"
-                    className="nav-link dropdown-toggle nav-link-lg nav-link-user"
-                  >
-                    <div className="d-lg-inline-block">
-                      <i data-feather="mail" />
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <strong>
+                        <span className=" label label-info">Jonney Depp</span>
+                      </strong>
+                      <span className="pull-right text-muted">
+                        <em>Yesterday</em>
+                      </span>
+                    </div>
+                    <div>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Pellentesque eleifend...
                     </div>
                   </a>
-                  <div className="dropdown-menu dropdown-menu-right">
-                    <a className="dropdown-item" href="#">
-                      <i data-feather="user" /> Account
-                    </a>
-                    <a className="dropdown-item active" href="#">
-                      <i data-feather="mail" /> Messages
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      <i data-feather="settings" /> Settings
-                    </a>
-                    <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#">
-                      <i data-feather="log-out" /> Logout
-                    </a>
-                  </div>
                 </li>
-                <li className="dropdown">
-                  <a
-                    href="#"
-                    data-toggle="dropdown"
-                    className="nav-link dropdown-toggle nav-link-lg nav-link-user"
-                  >
-                    <div className="avatar mr-1">
-                      <img
-                        src="assets/images/avatar/avatar-s-1.png"
-                        alt
-                        srcSet
-                      />
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <strong>
+                        <span className=" label label-success">
+                          Jonney Depp
+                        </span>
+                      </strong>
+                      <span className="pull-right text-muted">
+                        <em>Yesterday</em>
+                      </span>
                     </div>
-                    <div className="d-none d-md-block d-lg-inline-block">
-                      Hi, Saugi
+                    <div>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Pellentesque eleifend...
                     </div>
                   </a>
-                  <div className="dropdown-menu dropdown-menu-right">
-                    <a className="dropdown-item" href="#">
-                      <i data-feather="user" /> Account
-                    </a>
-                    <a className="dropdown-item active" href="#">
-                      <i data-feather="mail" /> Messages
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      <i data-feather="settings" /> Settings
-                    </a>
-                    <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#">
-                      <i data-feather="log-out" /> Logout
-                    </a>
-                  </div>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a className="text-center" href="#">
+                    <strong>Read All Messages</strong>
+                    <i className="fa fa-angle-right" />
+                  </a>
                 </li>
               </ul>
-            </div>
-          </nav>
+              {/* end dropdown-messages */}
+            </li>
+            <li className="dropdown">
+              <a className="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span className="top-label label label-success">4</span>{" "}
+                <i className="fa fa-tasks fa-3x" />
+              </a>
+              {/* dropdown tasks */}
+              <ul className="dropdown-menu dropdown-tasks">
+                <li>
+                  <a href="#">
+                    <div>
+                      <p>
+                        <strong>Task 1</strong>
+                        <span className="pull-right text-muted">
+                          40% Complete
+                        </span>
+                      </p>
+                      <div className="progress progress-striped active">
+                        <div
+                          className="progress-bar progress-bar-success"
+                          role="progressbar"
+                          aria-valuenow={40}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                          style={{ width: "40%" }}
+                        >
+                          <span className="sr-only">
+                            40% Complete (success)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <p>
+                        <strong>Task 2</strong>
+                        <span className="pull-right text-muted">
+                          20% Complete
+                        </span>
+                      </p>
+                      <div className="progress progress-striped active">
+                        <div
+                          className="progress-bar progress-bar-info"
+                          role="progressbar"
+                          aria-valuenow={20}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                          style={{ width: "20%" }}
+                        >
+                          <span className="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <p>
+                        <strong>Task 3</strong>
+                        <span className="pull-right text-muted">
+                          60% Complete
+                        </span>
+                      </p>
+                      <div className="progress progress-striped active">
+                        <div
+                          className="progress-bar progress-bar-warning"
+                          role="progressbar"
+                          aria-valuenow={60}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                          style={{ width: "60%" }}
+                        >
+                          <span className="sr-only">
+                            60% Complete (warning)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <p>
+                        <strong>Task 4</strong>
+                        <span className="pull-right text-muted">
+                          80% Complete
+                        </span>
+                      </p>
+                      <div className="progress progress-striped active">
+                        <div
+                          className="progress-bar progress-bar-danger"
+                          role="progressbar"
+                          aria-valuenow={80}
+                          aria-valuemin={0}
+                          aria-valuemax={100}
+                          style={{ width: "80%" }}
+                        >
+                          <span className="sr-only">80% Complete (danger)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a className="text-center" href="#">
+                    <strong>See All Tasks</strong>
+                    <i className="fa fa-angle-right" />
+                  </a>
+                </li>
+              </ul>
+              {/* end dropdown-tasks */}
+            </li>
+            <li className="dropdown">
+              <a className="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span className="top-label label label-warning">5</span>{" "}
+                <i className="fa fa-bell fa-3x" />
+              </a>
+              {/* dropdown alerts*/}
+              <ul className="dropdown-menu dropdown-alerts">
+                <li>
+                  <a href="#">
+                    <div>
+                      <i className="fa fa-comment fa-fw" />
+                      New Comment
+                      <span className="pull-right text-muted small">
+                        4 minutes ago
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <i className="fa fa-twitter fa-fw" />3 New Followers
+                      <span className="pull-right text-muted small">
+                        12 minutes ago
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <i className="fa fa-envelope fa-fw" />
+                      Message Sent
+                      <span className="pull-right text-muted small">
+                        4 minutes ago
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <i className="fa fa-tasks fa-fw" />
+                      New Task
+                      <span className="pull-right text-muted small">
+                        4 minutes ago
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="#">
+                    <div>
+                      <i className="fa fa-upload fa-fw" />
+                      Server Rebooted
+                      <span className="pull-right text-muted small">
+                        4 minutes ago
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a className="text-center" href="#">
+                    <strong>See All Alerts</strong>
+                    <i className="fa fa-angle-right" />
+                  </a>
+                </li>
+              </ul>
+              {/* end dropdown-alerts */}
+            </li>
+            <li className="dropdown">
+              <a className="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i className="fa fa-user fa-3x" />
+              </a>
+              {/* dropdown user*/}
+              <ul className="dropdown-menu dropdown-user">
+                <li>
+                  <a href="#">
+                    <i className="fa fa-user fa-fw" />
+                    User Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-gear fa-fw" />
+                    Settings
+                  </a>
+                </li>
+                <li className="divider" />
+                <li>
+                  <a href="login.html">
+                    <i className="fa fa-sign-out fa-fw" />
+                    Logout
+                  </a>
+                </li>
+              </ul>
+              {/* end dropdown-user */}
+            </li>
+            {/* end main dropdown */}
+          </ul>
+          {/* end navbar-top-links */}
+        </nav>
+        {/* end navbar top */}
+        <div id="page-wrapper"></div>
+      </div>
     </div>
-  )
-}
+  );
+};
