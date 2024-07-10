@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+import React from 'react';
+>>>>>>> 7a4e4bc4137e202b62211490548e5bd95a94e320
 
 export const Navbar = () => {
   return (
@@ -333,5 +337,11 @@ export const Navbar = () => {
         <div id="page-wrapper"></div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
+=======
+  )
+}
+
+>>>>>>> 7a4e4bc4137e202b62211490548e5bd95a94e320
