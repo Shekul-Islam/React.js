@@ -1,58 +1,101 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script type="text/javascript">
+			if (top !== window) {
+				top.location.href = window.location.href;
+			}
+			if (window.location.hash) {
+				window.location.href = window.location.href.replace(window.location.hash, '');
+			}
+		</script>
+    <script type="module">
+      import RefreshRuntime from "/@react-refresh"
+      RefreshRuntime.injectIntoGlobalHook(window)
+      window.$RefreshReg$ = () => {}
+      window.$RefreshSig$ = () => (type) => type
+      window.__vite_plugin_react_preamble_installed__ = true
+      </script>
+      
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-<<<<<<< HEAD
-    <link href="./dist/assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="./src/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link href="./src/assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
-    <link href="./src/assets/css/style.css" rel="stylesheet" />
-    <link href="./src/assets/css/main-style.css" rel="stylesheet" />
-    <!-- Page-Level CSS -->
-    <link href="./src/assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
-   </head>
-  
-=======
-    <link rel="stylesheet" href="../dist/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="../dist/assets/css/app.css">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="shortcut icon" href="../dist/assets/images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="src/App.css" />
-   
+     <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/public/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/dist/css/adminlte.min.css">
+   <!-- DataTables -->
+   <link rel="stylesheet" href="/public/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="/public/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+   <link rel="stylesheet" href="/public/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+   <!-- icheck bootstrap -->
+   <link rel="stylesheet" href="/public/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+   <!-- site-portal -->
+   <!-- Favicon -->
+		<link rel="shortcut icon" href="https://www.portotheme.com/html/molla/assets/images/demos-img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="../../../www.portotheme.com/html/molla/assets/images/demos-img/apple-touch-icon.html">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+		<!-- Web Fonts  -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet" type="text/css">
+
+		<!-- Vendor CSS -->
+		<!-- <link rel="stylesheet" href="/site-assets/lib/bootstrap/bootstrap.min.css"> -->
+
+		<!-- Theme CSS -->
+		<!-- <link rel="stylesheet" href="/site-assets/assets/css/main.min.css"> -->
   </head>
->>>>>>> 7a4e4bc4137e202b62211490548e5bd95a94e320
-  <body>
-
-    <div id="app">
+  <body class="hold-transition sidebar-mini">
+    
+    
     <div id="root"></div>
-    </div>
 
-<<<<<<< HEAD
-=======
-    
+
+
     <script type="module" src="/src/main.jsx"></script>
-    <script src="../dist/assets/js/feather-icons/feather.min.js"></script>
-    <script src="../dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../dist/assets/vendors/simple-datatables/simple-datatables.js"></script>
-    
-    <script src="../dist/assets/js/vendors.js"></script>
-    <script src="../dist/assets/js/main.js"></script>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
->>>>>>> 7a4e4bc4137e202b62211490548e5bd95a94e320
+    <!-- jQuery -->
+    <script src="/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/assets/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="/assets/dist/js/demo.js"></script>
+  
+<!-- DataTables  & Plugins -->
+<script src="/public/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/public/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="/public/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/public/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="/public/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/public/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="/public/assets/plugins/jszip/jszip.min.js"></script>
+<script src="/public/assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="/public/assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="/public/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="/public/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="/public/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/public/assets/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/public/assets/dist/js/demo.js"></script>
+<!-- AdminLTE App -->
+<script src="/public/assets/dist/js/adminlte.min.js"></script>
+<!-- site-asset -->
+<!-- Vendor -->
+<!-- <script src="/site-assets/lib/jquery/jquery.min.js"></script> -->
+<!-- <script src="/site-assets/lib/jquery.appear/jquery.appear.min.js"></script> -->
+<!--<script src="lib/popper/umd/popper.min.js"></script>-->
+<!-- <script src="/site-assets/lib/jquery.lazyload/jquery.lazyload.min.js"></script>
+<script src="/site-assets/lib/isotope/jquery.isotope.min.js"></script> -->
 
-    <script src="./src/assets/plugins/jquery-1.10.2.js"></script>
-    <script src="./src/assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="./src/assets/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="./src/assets/plugins/pace/pace.js"></script>
-    <script src="./src/assets/scripts/siminta.js"></script>
-    <!-- Page-Level Plugin Scripts-->
-    <script src="./src/assets/plugins/morris/raphael-2.1.0.min.js"></script>
-    <script src="./src/assets/plugins/morris/morris.js"></script>
-    <script src="./src/assets/scripts/dashboard-demo.js"></script>
+<!-- Theme Base, Components and Settings -->
+<!-- <script src="/site-assets/assets/main.js"></script> -->
   </body>
 </html>

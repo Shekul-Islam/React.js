@@ -1,390 +1,141 @@
-<<<<<<< HEAD
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./sidebar.css";
-=======
 import React from 'react';
->>>>>>> 7a4e4bc4137e202b62211490548e5bd95a94e320
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
-  return (
-    <div>
-<<<<<<< HEAD
-      <div id="wrapper" />
-      <nav className="navbar-default navbar-static-side" role="navigation">
-        {/* sidebar-collapse */}
-        <div className="sidebar-collapse">
-          {/* side-menu */}
-          <ul className="nav" id="side-menu">
-            <li>
-              {/* user image section*/}
-              <div className="user-section">
-                <div className="user-section-inner">
-                  <img src="assets/img/user.jpg" alt />
+    return (
+        <aside className="main-sidebar sidebar-dark-primary elevation-4">
+        {/* Brand Logo */}
+        <NavLink to="/" className="brand-link">
+            <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{opacity: '.8'}} />
+            <span className="brand-text font-weight-light">AdminLTE 3</span>
+        </NavLink>
+        {/* Sidebar */}
+        <div className="sidebar">
+            {/* Sidebar user (optional) */}
+            <div className="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div className="image">
+                <img src="assets/dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+            </div>
+            <div className="info">
+                <NavLink to="/" className="d-block">E-Commerce</NavLink>
+            </div>
+            </div>
+            {/* SidebarSearch Form */}
+            <div className="form-inline">
+            <div className="input-group" data-widget="sidebar-search">
+                <input className="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search" />
+                <div className="input-group-append">
+                <button className="btn btn-sidebar">
+                    <i className="fas fa-search fa-fw" />
+                </button>
                 </div>
-                <div className="user-info">
-                  <div>
-                    Jonny <strong>Deen</strong>
-                  </div>
-                  <div className="user-text-online">
-                    <span className="user-circle-online btn btn-success btn-circle " />
-                    &nbsp;Online
-                  </div>
-                </div>
-              </div>
-              {/*end user image section*/}
-            </li>
-            <li className="sidebar-search">
-              {/* search section*/}
-              <div className="input-group custom-search-form">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Search..."
-                />
-                <span className="input-group-btn">
-                  <button className="btn btn-default" type="button">
-                    <i className="fa fa-search" />
-                  </button>
-                </span>
-              </div>
-              {/*end search section*/}
-            </li>
-            <li className>
-              <a href="index.html">
-                <i className="fa fa-dashboard fa-fw" />
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fa fa-bar-chart-o fa-fw" />
-                Charts
-                <span className="fa arrow" />
-              </a>
-              <ul className="nav nav-second-level">
-                <li>
-                  <a href="flot.html">Flot Charts</a>
-                </li>
-                <li>
-                  <a href="morris.html">Morris Charts</a>
-                </li>
-              </ul>
-              {/* second-level-items */}
-            </li>
-            <li>
-              <a href="timeline.html">
-                <i className="fa fa-flask fa-fw" />
-                Timeline
-              </a>
-            </li>
-            <li>
-              <a href="tables.html">
-                <i className="fa fa-table fa-fw" />
-                Tables
-              </a>
-            </li>
-            <li>
-              <a href="forms.html">
-                <i className="fa fa-edit fa-fw" />
-                Forms
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i className="fa fa-wrench fa-fw" />
-                UI Elements
-                <span className="fa arrow" />
-              </a>
-              <ul className="nav nav-second-level">
-                <li>
-                  <a href="panels-wells.html">Panels and Wells</a>
-                </li>
-                <li>
-                  <a href="buttons.html">Buttons</a>
-                </li>
-                <li>
-                  <a href="notifications.html">Notifications</a>
-                </li>
-                <li>
-                  <a href="typography.html">Typography</a>
-                </li>
-                <li>
-                  <a href="grid.html">Grid</a>
-                </li>
-              </ul>
-              {/* second-level-items */}
-            </li>
-            <li>
-              <a href="#">
-                <i className="fa fa-sitemap fa-fw" />
-                Multi-Level Dropdown
-                <span className="fa arrow" />
-              </a>
-              <ul className="nav nav-second-level">
-                <li>
-                  <a href="#">Second Level Item</a>
-                </li>
-                <li>
-                  <a href="#">Second Level Item</a>
-                </li>
-                <li>
-                  <a href="#">
-                    Third Level <span className="fa arrow" />
-                  </a>
-                  <ul className="nav nav-third-level">
-                    <li>
-                      <a href="#">Third Level Item</a>
+            </div>
+            </div>
+            {/* Sidebar Menu */}
+            <nav className="mt-2">
+            <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                {/* Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library */}
+                <li className="nav-item">
+                <a href="#" className="nav-link">
+                    <i className="nav-icon fas fa-tachometer-alt" />
+                    <p>
+                    Customer
+                    <i className="right fas fa-angle-left" />
+                    </p>
+                </a>
+                <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                    <NavLink href="/addcustomer" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Add Customer</p>
+                        
+                    </NavLink>
                     </li>
-                    <li>
-                      <a href="#">Third Level Item</a>
+                    <li className="nav-item">
+                    <a href="../../index2.html" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Customer List</p>
+                    </a>
                     </li>
-                    <li>
-                      <a href="#">Third Level Item</a>
+                    <li className="nav-item">
+                    <a href="../../index2.html" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Customer Ledger</p>
+                    </a>
                     </li>
-                    <li>
-                      <a href="#">Third Level Item</a>
+                </ul>
+                </li>
+                <li className="nav-item">
+                <a href="../gallery.html" className="nav-link">
+                    <i className="nav-icon far fa-image" />
+                    <p>
+                    Gallery
+                    </p>
+                </a>
+                </li>
+            
+                <li className="nav-item">
+                <a href="#" className="nav-link">
+                    <i className="nav-icon fas fa-user" />
+                    <p>
+                    Users
+                    <i className="fas fa-angle-left right" />
+                    </p>
+                </a>
+                <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                    <NavLink to="/add-user" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Add-User</p>
+                    </NavLink>
                     </li>
-                  </ul>
-                  {/* third-level-items */}
+                    <li className="nav-item">
+                    <NavLink to="/manage-user" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Manage User</p>
+                    </NavLink>
+                    </li>
+                </ul>
                 </li>
-              </ul>
-              {/* second-level-items */}
-            </li>
-            <li className="active">
-              <a href="#">
-                <i className="fa fa-files-o fa-fw" />
-                Sample Pages
-                <span className="fa arrow" />
-              </a>
-              <ul className="nav nav-second-level">
-                <li className="selected">
-                  <a href="blank.html">Blank Page</a>
+                <li className="nav-item">
+                <NavLink to="#" className="nav-link">
+                    <i className="nav-icon fas fa-user" />
+                    <p>
+                   product
+                    <i className="fas fa-angle-left right" />
+                    </p>
+                </NavLink>
+                <ul className="nav nav-treeview">
+                    <li className="nav-item">
+                    <NavLink to="/itemslist" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Product List</p>
+                    </NavLink>
+                    </li>
+                    <li className="nav-item">
+                    <NavLink to="/items" className="nav-link">
+                        <i className="far fa-circle nav-icon" />
+                        <p>Add Product</p>
+                    </NavLink>
+                    </li>
+                </ul>
                 </li>
-                <li>
-                  <a href="login.html">Login Page</a>
-                </li>
-              </ul>
-              {/* second-level-items */}
-            </li>
-          </ul>
-          {/* end side-menu */}
-        </div>
-        {/* end sidebar-collapse */}
-      </nav>
-      <div id="page-wrapper" />
-    </div>
-  );
-};
-=======
-      
 
-    <div id="sidebar" className="active">
-<div className="sidebar-wrapper active">
-  <div className="sidebar-header">
-    <img src="assets/images/logo.svg" alt srcSet />
-  </div>
-  <div className="sidebar-menu">
-    <ul className="menu">
-      <li className="sidebar-title">Main Menu</li>
-      <li className="sidebar-item">
-        <a href="index.html" className="sidebar-link">
-          <i data-feather="home" width={20} />
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="triangle" width={20} />
-          <span>Components</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="component-alert.html">Alert</a>
-          </li>
-          <li>
-            <a href="component-badge.html">Badge</a>
-          </li>
-          <li>
-            <a href="component-breadcrumb.html">Breadcrumb</a>
-          </li>
-          <li>
-            <a href="component-buttons.html">Buttons</a>
-          </li>
-          <li>
-            <a href="component-card.html">Card</a>
-          </li>
-          <li>
-            <a href="component-carousel.html">Carousel</a>
-          </li>
-          <li>
-            <a href="component-dropdowns.html">Dropdowns</a>
-          </li>
-          <li>
-            <a href="component-list-group.html">List Group</a>
-          </li>
-          <li>
-            <a href="component-modal.html">Modal</a>
-          </li>
-          <li>
-            <a href="component-navs.html">Navs</a>
-          </li>
-          <li>
-            <a href="component-pagination.html">Pagination</a>
-          </li>
-          <li>
-            <a href="component-progress.html">Progress</a>
-          </li>
-          <li>
-            <a href="component-spinners.html">Spinners</a>
-          </li>
-          <li>
-            <a href="component-tooltips.html">Tooltips</a>
-          </li>
-        </ul>
-      </li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="briefcase" width={20} />
-          <span>Extra Components</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="component-extra-avatar.html">Avatar</a>
-          </li>
-          <li>
-            <a href="component-extra-divider.html">Divider</a>
-          </li>
-        </ul>
-      </li>
-      <li className="sidebar-title">Forms &amp; Tables</li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="file-text" width={20} />
-          <span>Form Elements</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="form-element-input.html">Input</a>
-          </li>
-          <li>
-            <a href="form-element-input-group.html">Input Group</a>
-          </li>
-          <li>
-            <a href="form-element-select.html">Select</a>
-          </li>
-          <li>
-            <a href="form-element-radio.html">Radio</a>
-          </li>
-          <li>
-            <a href="form-element-checkbox.html">Checkbox</a>
-          </li>
-          <li>
-            <a href="form-element-textarea.html">Textarea</a>
-          </li>
-        </ul>
-      </li>
-      <li className="sidebar-item">
-        <a href="form-layout.html" className="sidebar-link">
-          <i data-feather="layout" width={20} />
-          <span>Form Layout</span>
-        </a>
-      </li>
-      <li className="sidebar-item">
-        <a href="form-editor.html" className="sidebar-link">
-          <i data-feather="layers" width={20} />
-          <span>Form Editor</span>
-        </a>
-      </li>
-      <li className="sidebar-item">
-        <a href="table.html" className="sidebar-link">
-          <i data-feather="grid" width={20} />
-          <span>Table</span>
-        </a>
-      </li>
-      <li className="sidebar-item active">
-        <a href="table-datatable.html" className="sidebar-link">
-          <i data-feather="file-plus" width={20} />
-          <span>Datatable</span>
-        </a>
-      </li>
-      <li className="sidebar-title">Extra UI</li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="user" width={20} />
-          <span>Widgets</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="ui-chatbox.html">Chatbox</a>
-          </li>
-          <li>
-            <a href="ui-pricing.html">Pricing</a>
-          </li>
-          <li>
-            <a href="ui-todolist.html">To-do List</a>
-          </li>
-        </ul>
-      </li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="trending-up" width={20} />
-          <span>Charts</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="ui-chart-chartjs.html">ChartJS</a>
-          </li>
-          <li>
-            <a href="ui-chart-apexchart.html">Apexchart</a>
-          </li>
-        </ul>
-      </li>
-      <li className="sidebar-title">Pages</li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="user" width={20} />
-          <span>Authentication</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="auth-login.html">Login</a>
-          </li>
-          <li>
-            <a href="auth-register.html">Register</a>
-          </li>
-          <li>
-            <a href="auth-forgot-password.html">Forgot Password</a>
-          </li>
-        </ul>
-      </li>
-      <li className="sidebar-item has-sub">
-        <a href="#" className="sidebar-link">
-          <i data-feather="alert-circle" width={20} />
-          <span>Errors</span>
-        </a>
-        <ul className="submenu">
-          <li>
-            <a href="error-403.html">403</a>
-          </li>
-          <li>
-            <a href="error-404.html">404</a>
-          </li>
-          <li>
-            <a href="error-500.html">500</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <button className="sidebar-toggler btn x">
-    <i data-feather="x" />
-  </button>
-</div>
-</div>
-  </div>
-  );
+                <li className="nav-header">MISCELLANEOUS</li>
+                <li className="nav-item">
+                <a href="../../iframe.html" className="nav-link">
+                    <i className="nav-icon fas fa-ellipsis-h" />
+                    <p>Tabbed IFrame Plugin</p>
+                </a>
+                </li>
+            </ul>
+            </nav>
+            {/* /.sidebar-menu */}
+        </div>
+        {/* /.sidebar */}
+        </aside>
+    );
 };
 
 export default Sidebar;
->>>>>>> 7a4e4bc4137e202b62211490548e5bd95a94e320
