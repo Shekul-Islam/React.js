@@ -5,12 +5,16 @@ import Footer from '../components/Footer';
 
 const Home = () => {
     return (
-        <div>
+        <div className="wrapper">
             <Navbar/>
             <Sidebar/>
-            Home
+            <div className='content-wrapper'> 
+            <div className="col-md-12">
+            <h1>Home</h1>
+            </div>
+            </div>
             <Footer/>
-        </div>
+    </div>
     );
 };
 
