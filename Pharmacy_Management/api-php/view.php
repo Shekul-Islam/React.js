@@ -3,9 +3,9 @@ header("Access-Control-Allow-Origin:* ");
 header("Access-Control-Allow-Headers:* ");
 header("Access-Control-Allow-Methods:* ");
 
-$connect = mysqli_connect("localhost", "root","", "react-php");
+$connect = mysqli_connect("localhost", "root","", "pharmacy_management");
 
-$query = "SELECT * FROM users ORDER BY id DESC";
+$query = "SELECT * FROM cumtomer ORDER BY id DESC";
 $mysqli =mysqli_query($connect,$query);
 $json_data =array();
 while($row = mysqli_fetch_assoc($mysqli))

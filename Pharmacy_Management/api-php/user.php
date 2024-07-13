@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin:* ");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 
-$db_conn= mysqli_connect("localhost","root", "", "react-php");
+$db_conn= mysqli_connect("localhost","root", "", "pharmacy_management");
 if($db_conn===false)
 {
   die("ERROR: Could Not Connect".mysqli_connect_error());
@@ -23,7 +23,7 @@ switch($method)
       $json_array= array();
       $userid= $path[4];
       
-      $getuserrow= mysqli_query($db_conn, "SELECT * FROM users WHERE userid='$userid' ");
+      $getuserrow= mysqli_query($db_conn, "SELECT * FROM cumtomer WHERE userid='$userid' ");
       while($userrow= mysqli_fetch_array($getuserrow))
       {
        $json_array['rowUserdata']= array('id'=>$userrow['userid'],'name'=>$userrow['name'], 'email'=>$userrow['email'], 'phone'=>$userrow['phone'],);
@@ -33,7 +33,7 @@ switch($method)
 
     } else { 
 
-    $alluser= mysqli_query($db_conn, "SELECT * FROM users"); 
+    $alluser= mysqli_query($db_conn, "SELECT * FROM cumtomer"); 
     if(mysqli_num_rows($alluser) > 0)
     {
       while($row= mysqli_fetch_array($alluser))
@@ -56,7 +56,7 @@ switch($method)
         $name= $userpostdata->name;
         $email= $userpostdata->email;
         $phone= $userpostdata->phone;
-        $result= mysqli_query($db_conn, "INSERT INTO users (name, email, phone) 
+        $result= mysqli_query($db_conn, "INSERT INTO cumtomer (name, email, phone) 
         VALUES('$name', '$email', '$phone')");
 
         if($result)

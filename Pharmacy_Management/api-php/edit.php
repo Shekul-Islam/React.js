@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin:* ");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 
-$db_conn= mysqli_connect("localhost","root", "", "react-php");
+$db_conn= mysqli_connect("localhost","root", "", "pharmacy_management");
 if($db_conn===false)
 {
   die("ERROR: Could Not Connect".mysqli_connect_error());
