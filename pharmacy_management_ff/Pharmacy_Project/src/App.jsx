@@ -24,6 +24,7 @@ import Income from './pages/finance/Income';
 import Expence from './pages/finance/Expence';
 import InvoiceList from './pages/finance/InvoiceList';
 import InvoiceDetails from './pages/finance/InvoiceDetails';
+import EditCustomer from './pages/customer/EditCustomer';
 
 
 
@@ -38,6 +39,7 @@ const App = () => {
       <Route path="/addcustomer" element={<AddCustomer/>}/>
       <Route path="/customerlist" element={<CustomerList/>}/>
       <Route path="/customerledger" element={<CustomerLedger/>}/>
+      <Route path="/editcustomer/:id" element={<EditCustomer/>}/>
       <Route path="/addmedicine" element={<AddMedicine/>}/>
       <Route path="/medicinelist" element={<MedicineList/>}/>
       <Route path="/medicinedetails" element={<MedicineDetails/>} />

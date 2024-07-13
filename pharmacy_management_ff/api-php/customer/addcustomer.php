@@ -7,6 +7,7 @@ $con = new mysqli('localhost', 'root', '', 'pharmacy_management');
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
+$details = $_POST['details'];
 
 
 $target_dir = "images/";
@@ -17,7 +18,7 @@ if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
     $photo='';
 }
 
-$query = "insert into customer(name,email,phone,photo)values('$name','$email','$phone','$photo')";
+$query = "insert into customer(name,email,phone,photo,details)values('$name','$email','$phone','$photo','$details')";
 if ($name != '') {
     $con->query($query);
     echo json_encode(['status'=>true]);
