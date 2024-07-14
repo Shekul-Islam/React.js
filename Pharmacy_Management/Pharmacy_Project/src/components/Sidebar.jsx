@@ -7,12 +7,12 @@ const Sidebar = () => {
       {/* Brand Logo */}
       <NavLink to="/" className="brand-link">
         <img
-          src="assets/dist/img/AdminLTELogo.png"
-          alt="AdminLTE Logo"
+          src="assets/dist/img/pharmacylog.png"
+          alt="pharmacylog"
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}
         />
-        <span className="brand-text font-weight-light">Pharmacy Management</span>
+        <span className="brand-text font-weight-dark">Pharmacy Management</span>
       </NavLink>
       {/* Sidebar */}
       <div className="sidebar">
@@ -20,14 +20,14 @@ const Sidebar = () => {
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
           <div className="image">
             <img
-              src="assets/dist/img/user2-160x160.jpg"
+              src="assets/dist/img/profileme.png"
               className="img-circle elevation-2"
-              alt="User Image"
+              alt="profileme"
             />
           </div>
           <div className="info">
-            <NavLink to="/" className="d-block">
-              Inventory
+            <NavLink to="/home" className="d-block">
+              <span>Dashboard</span>
             </NavLink>
           </div>
         </div>

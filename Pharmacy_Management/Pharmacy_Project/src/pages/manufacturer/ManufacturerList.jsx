@@ -1,21 +1,100 @@
-import React from 'react';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 import Footer from '../../components/Footer';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom';
 
 const ManufacturerList = () => {
+  const [items, setItems] = useState([]);
+
+    const itemDelete = (id) => {
+        axios.delete("http://localhost/pharmacy_management/api-php/manufacturer/deletemanufacturer.php?id=" + id)
+            .then((res) => (console.log(res)))
+
+        axios.get("http://localhost/pharmacy_management/api-php/manufacturer/manufacturerlist.php")
+            .then((res) => setItems(res.data))
+    }
+
+    useEffect(() => {
+        axios.get("http://localhost/pharmacy_management/api-php/manufacturer/manufacturerlist.php")
+            .then((res) => setItems(res.data))
+    }, [])
     return (
         <div className="wrapper">
-            <Navbar/>
-            <Sidebar/>
-            <div className='content-wrapper'> 
-            <div className="col-md-12">
-            <h1>KLMNOPQRSTUVWXYZ</h1>
+    <Navbar />
+    <Sidebar />
+    <div className="content-wrapper">
+    <section className="content">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-12">
+            {/* /.card */}
+            <div className="card">
+              <div className="card-header">
+                <h3 className="card-title">Manufacturer List</h3>
+              </div>
+              <div className="card-header">
+                <Link to="/addmanufacturer">Add Manufacturer</Link>
+              </div>
+              {/* /.card-header */}
+              <div className="card-body">
+              {/* <p className="text-danger">{ message} </p>  */}
+
+              <table className="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Details</th>
+                                <th scope="col">photo</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {items.map((data, i) => {
+                                return (
+                              
+                                <tr key={i}>
+                                    <th scope="row">{++i}</th>
+                                    <td>{data.name}</td>
+                                    <td>{data.email}</td>
+                                    <td>{data.phone}</td>
+                                    <td>{data.details}</td>
+                                    <td>
+                                        <img className='w-50' src={`http://localhost/pharmacy_management/api-php/manufacturer/images/${data.photo}`} />
+                                    </td>
+                                    <td>
+                                        <NavLink to={`/updatemanufacturer/${data.id}`}>
+                                            <button className='btn btn-info mb-2 mt-2'>Update</button>
+                                        </NavLink>
+                                        <button className='btn btn-danger' onClick={() => { itemDelete(data.id) }}>Delete</button>
+                                    </td>
+                                </tr>
+                               
+                                )
+                            })}
+                        </tbody>
+                    </table>
+              </div>
+              {/* /.card-body */}
             </div>
-            </div>
-            <Footer/>
+            {/* /.card */}
+          </div>
+          {/* /.col */}
         </div>
+        {/* /.row */}
+      </div>
+      {/* /.container-fluid */}
+    </section>
+    </div>
+      {/* footer-section */}
+      <Footer />
+    </div>
     );
 };
 
-export default ManufacturerList;
+export default ManufacturerList
