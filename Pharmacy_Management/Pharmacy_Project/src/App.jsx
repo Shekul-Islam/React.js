@@ -14,7 +14,7 @@ import EmployeProfile from './pages/humanresource/EmployeProfile';
 import Attendence from './pages/humanresource/Attendence';
 import Salary from './pages/humanresource/Salary';
 import Login from './pages/Login';
-import Registration from './pages/Registration';
+// import Registration from './pages/Registration';
 import AddManufacturer from './pages/manufacturer/AddManufacturer';
 import AddManufactureReturn from './pages/return/AddManufacturerReturn';
 import ManufacturerReturnList from './pages/return/ManufacturerReturnList';
@@ -62,7 +62,7 @@ const App = () => {
       <Route path="/invoicelist" element={<InvoiceList />} />
       <Route path="/invoicedetails" element={<InvoiceDetails />} />
       <Route path="/login" element={<Login/>} />
-      <Route path="/" element={<Registration/>} />
+      {/* <Route path="/" element={<Registration/>} /> */}
     </Routes>
   </BrowserRouter>
   );

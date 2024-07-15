@@ -3,11 +3,12 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
+    
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
       {/* Brand Logo */}
       <NavLink to="/" className="brand-link">
         <img
-          src="assets/dist/img/pharmacylog.png"
+          src="#"
           alt="pharmacylog"
           className="brand-image img-circle elevation-3"
           style={{ opacity: ".8" }}
@@ -15,12 +16,12 @@ const Sidebar = () => {
         <span className="brand-text font-weight-dark">Pharmacy Management</span>
       </NavLink>
       {/* Sidebar */}
-      <div className="sidebar">
+      <div className="sidebar ">
         {/* Sidebar user (optional) */}
         <div className="user-panel mt-3 pb-3 mb-3 d-flex">
           <div className="image">
             <img
-              src="assets/dist/img/profileme.png"
+              src="assets/dist/img/profileme.jpg"
               className="img-circle elevation-2"
               alt="profileme"
             />
@@ -231,11 +232,21 @@ const Sidebar = () => {
                 </li>
               </ul>
             </li>
-           
+            <li className="nav-item">
+              <NavLink to="/login" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+                <p>
+                  Logout
+                  
+                </p>
+              </NavLink>
+             
+            </li>
           </ul>
         </nav>
       </div>
     </aside>
+    
   );
 };
 
