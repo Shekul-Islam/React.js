@@ -2,17 +2,19 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <nav className="main-header navbar navbar-expand navbar-white navbar-light">
+      
+      
+          <nav className="main-header navbar navbar-expand navbar-white navbar-light">
         {/* Left navbar links */}
         <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i className="fas fa-bars" /></a>
           </li>
           <li className="nav-item d-none d-sm-inline-block">
-            <a href="/home" className="nav-link">Home</a>
+            <a href="/home" className="nav-link"><h3>Home</h3></a>
           </li>
           <li className="nav-item d-none d-sm-inline-block">
-            <a href="#" className="nav-link">Contact</a>
+            <a href="#" className="nav-link"><h3>Contact</h3></a>
           </li>
         </ul>
         {/* Right navbar links */}
@@ -135,6 +137,8 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+    
+    
     );
 };
 

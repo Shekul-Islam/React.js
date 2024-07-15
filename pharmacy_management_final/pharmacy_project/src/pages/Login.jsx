@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="container">
-      <div className="login-box">
+    <div >
+      <div className="login-box box-solid bg-aqua">
         <div className="login-logo">
-          <a href="../../index2.html">
-            <b>Admin</b>LTE
+          <a href="#">
+            <b>Pharmacy</b>Management
           </a>
         </div>
         {/* /.login-logo */}
-        <div className="card">
-          <div className="card-body login-card-body">
+        <div className="card bg-light-blue-gradient">
+          <div className="login-box box-solid ">
             <p className="login-box-msg">Sign in to start your session</p>
             <form action="/home" method="post">
               <div className="input-group mb-3">
                 <input
-                  type="email"
+                  type="user"
                   className="form-control"
-                  placeholder="Email"
+                  placeholder="User ID"
                 />
                 <div className="input-group-append">
                   <div className="input-group-text">
-                    <span className="fas fa-envelope" />
+                  <i className="nav-icon fas fa-user" />
                   </div>
                 </div>
               </div>
